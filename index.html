@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwitter Secure Messenger</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+
+
+    <script type="text/javascript" src="./js/bin/jsencrypt.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js">
+    </script>
+
+    <script src="./js/config.js"></script>
+</head>
+
+<body>
+    <div id="index">
+        <div id="header">
+            <div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleContacts">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <h3 class="title">Kwitter Secure Messenger</h3>
+                </div>
+
+                <div class="dropdown">
+                    <img src="" class="avatar" id="mypic">
+                    <div id="drp-content" class="ss">
+                        <div id="myname"></div>
+                        <hr>
+                        <a href="./change_public_key.html">Change keys</a>
+                        <a id="signout">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+
+            <div class="tab" id="messages">
+                <div class="myKey">
+                    <textarea placeholder="paste your private key here" id="pkey"></textarea>
+                    <label class="flabel">or select from file:</label>
+                    <input type="file" id="private-key">
+                </div>
+                <hr>
+                <b>My Contacts</b>
+                <div class="addFromEmail">
+                    <input type="email" id="email" placeholder="email">
+                    <button id="addFromEmail">Add</button>
+                </div>
+                <hr>
+            </div>
+            <div id="msgcontent">
+                <div id="content">
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div>
+                <textarea placeholder="say something..." id="txt-message" maxlength="245"></textarea>
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>

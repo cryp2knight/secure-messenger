@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kwitter Secure Messenger</title>
+
+    <link rel="stylesheet" type="text/css" href="./styles/login.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js">
+    </script>
+    <script src="./js/config.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                currentUser = user
+                updateUser()
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <h1>Kwitter Secure Messenger</h1>
+            <p>
+                Chat with <strong>freedom</strong>.
+            </p>
+        </div>
+
+        <button id="signin-google">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+                style=" fill:#000000;">
+                <g transform="">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#ffffff">
+                            <path
+                                d="M89.42656,165.12c-43.63156,0 -79.13344,-35.48844 -79.13344,-79.12c0,-43.63156 35.50187,-79.12 79.13344,-79.12c19.76656,0 38.68656,7.32344 53.29312,20.62656l2.66063,2.43219l-26.09563,26.09563l-2.41875,-2.06938c-7.65937,-6.5575 -17.40156,-10.17219 -27.43937,-10.17219c-23.27375,0 -42.22063,18.93344 -42.22063,42.20719c0,23.27375 18.94688,42.20719 42.22063,42.20719c16.78344,0 30.04625,-8.57312 36.29469,-23.17969h-39.73469v-35.62281l77.57469,0.1075l0.57781,2.72781c4.04469,19.20219 0.80625,47.44781 -15.5875,67.65781c-13.57188,16.72969 -33.45938,25.22219 -59.125,25.22219z">
+                            </path>
+                        </g>
+                        <path d="" fill="none"></path>
+                        <path d="" fill="none"></path>
+                    </g>
+                </g>
+            </svg>
+            &nbsp;&nbsp;Sign in with Google</button>
+    </div>
+
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

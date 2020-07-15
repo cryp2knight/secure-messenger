@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial Narrow", sans-serif;
+  margin: 0px;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+html,
+body,
+#index {
+  height: 100%;
+}
+
+#index {
+  display: none;
+}
+
+.tab {
+  float: left;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  width: auto;
+  height: 100%;
+  padding: 10px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+#main {
+  height: 100%;
+}
+
+#content {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  overflow-y: auto;
+  height: 100%;
+  background-color: white;
+}
+
+#msgcontent {
+  height: 100%;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 100%;
+  border-left: none;
+  display: none;
+  bottom: 0px;
+}
+
+.me {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.you {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.me div {
+  max-width: 80%;
+}
+
+.you div {
+  max-width: 80%;
+}
+
+.me div div {
+  border-radius: 15px 15px 0px 15px;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: #ffff;
+  padding: 10px;
+  max-width: 100%;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.you div div {
+  border-radius: 15px 15px 15px 0px;
+  padding: 10px;
+  max-width: 100%;
+  background-image: linear-gradient(135deg, #f1f0f0 0%, #c3cfe2 100%);
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+small {
+  color: darkgrey;
+  font-size: xx-small;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  background-color: white;
+  border-top-style: outset;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  margin-top: 0px;
+  background-color: white;
+  border-bottom-style: inset;
+}
+
+#mypic {
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  border-color: #6a11cb;
+  border-width: 5px;
+}
+
+#header div {
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#myname {
+  font-size: larger;
+  font-weight: 200;
+}
+
+#footer div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#footer div textarea {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  resize: none;
+  outline: none;
+}
+
+#send-message {
+  width: 100px;
+  border-radius: 20px;
+  margin: 10px 10px 10px 0px;
+  background-color: #0084ff;
+  color: #ffff;
+  border-style: none;
+  border-collapse: collapse;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.avname {
+  display: flex;
+  padding: 2px;
+  margin: 5px;
+}
+
+.avname div {
+  margin-left: 5px;
+}
+
+.addFromEmail {
+  display: flex;
+  padding-top: 10px;
+}
+
+#email {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+.addFromEmail button {
+  max-width: 40px;
+  background-color: #0084ff;
+  color: #ffff;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.avyou {
+  vertical-align: bottom;
+}
+
+.flabel {
+  margin-top: 3px;
+  font-size: smaller;
+  color: gray;
+}
+
+.myKey {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  display: grid;
+}
+
+.receiverProf {
+  width: 100%;
+}
+
+table tr td .avatar {
+  width: 25px;
+  height: 25px;
+}
+
+.receiverProf center .avatar {
+  width: 70px;
+  height: 70px;
+}
+
+#header div .dropdown {
+  display: block;
+}
+
+#header div .dropdown #drp-content {
+  display: none;
+  position: absolute;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  right: 0;
+  max-width: 200px;
+  width: 200px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+#drp-content a {
+  color: black;
+  padding: 7px;
+  text-decoration: none;
+  display: block;
+}
+
+#drp-content a:hover {
+  background-color: #ddd;
+}
+
+#dropbtn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+#pkey {
+  width: 100%;
+  font-size: small;
+  resize: none;
+  min-height: 100px;
+}
+
+div .title {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}

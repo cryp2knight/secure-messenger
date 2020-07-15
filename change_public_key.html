@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Keys - Kwitter Secure Messenger</title>
+    <link rel="stylesheet" type="text/css" href="./styles/change.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js">
+    </script>
+
+    <script src="./js/config.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <img src="" class="avatar" id="mypic">
+        </div>
+        <div>
+            <div class="name" id="name">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="instruction">
+                <p>To generate your keys, execute the following commands in your computer's command prompt or terminal.</p>
+                <div id="command">
+                    <code>openssl genrsa -out rsa_2048_priv.pem 2048</code><br>
+                    <code>openssl rsa -pubout -in rsa_2048_priv.pem -out rsa_2048_pub.pem</code>
+                </div>
+                <p>or you can visit this <strong><a href="http://travistidwell.com/jsencrypt/demo/">page</a></strong> to generate your keys <em>(if you are on mobile)</em></p>
+                <p><strong>Note:</strong> <em>Keep and secure your private key. You will not be able to decrypt and read your messages without your private key.
+                    <br>Also, pls <strong><u>USE 2048 KEY SIZE or HIGHER!!!</u></strong></em></p>
+                <!-- <p>Read more about RSA keys <a href="http://travistidwell.com/jsencrypt/">here</a></p> -->
+            </div>
+        </div>
+        <div>
+            <div>
+                <hr>
+                <div>
+                    <small>Your public key:</small>
+                    <textarea placeholder="paste your public key here" id="rsaKey"></textarea>
+                </div>
+
+                <div class="btnfooter">
+                    <small>Or select from file:</small> <input type="file" id="keyFile">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="btnfooter">
+                <a href="./index.html">Go to home page</a>
+                <button id="btnSave">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/changekeys.js"></script>
+
+</body>
+
+</html>
